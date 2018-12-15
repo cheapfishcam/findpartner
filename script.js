@@ -22,5 +22,5 @@ localStorage.setItem(drname, patientname);
 
 //should clear input value in both fields after user pressses submit (optional)
 
-  alert(localStorage);
+  console.log(localStorage);
 }
