@@ -1,10 +1,15 @@
 #card{
   border-radius: 5px;
   margin-top: 90px;
+  margin-bottom: 90px;
 }
 
 #h5{
   font-style: italic;
   opacity: 0.5;
 
+}
+
+#formsearch{
+  margin-left: 370px;
 }
