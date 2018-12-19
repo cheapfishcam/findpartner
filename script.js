@@ -20,20 +20,18 @@ var ref = database.ref('list');
 
 submitbtn.addEventListener('click' , submitfunc);
 
-
 //pushes user inputs to database
 function submitfunc(){
-let patientname = document.getElementById("patient").value;
-let drname = document.getElementById('dr').value;
+var ptname = document.getElementById("patient").value;
+let drinfo = document.getElementById('dr').value;
 let patientno = document.getElementById('patientno').value;
 let info = {
-   ptname : patientname,
+  //assigns these keys to user input
+   patientname : ptname,
    fileno : patientno,
-   dr : drname
+   dr : drinfo
 
 }
-
-
 ref.push(info);
 //should clear input value in both fields after user pressses submit (optional)
 }
