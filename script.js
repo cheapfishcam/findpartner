@@ -11,7 +11,15 @@ var mainApp = {};
       window.location.replace('login.html')
     }
   });
+
+  function logOut(){
+    firebase.auth().signOut();
+  }
+
+  mainApp.logOut = logOut;
 })()
+
+
 let submitbtn = document.getElementById('submit');
 let searchbtn = document.getElementById('searchbtn');
 let card = document.getElementById('card');
