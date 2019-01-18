@@ -1,16 +1,17 @@
-// Initialize Firebase
- var config = {
-   apiKey: "AIzaSyBUGUjS7M_QDrwdtY6Af7O8-hc6fA0wink",
-   authDomain: "findpartner-9c012.firebaseapp.com",
-   databaseURL: "https://findpartner-9c012.firebaseio.com",
-   projectId: "findpartner-9c012",
-   storageBucket: "findpartner-9c012.appspot.com",
-   messagingSenderId: "52089296201"
- };
- firebase.initializeApp(config);
-
-
-
+var mainApp = {};
+(function(){
+  var uid = null;
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in.
+      uid = user.uid;
+    }
+    else {
+      uid = null;
+      window.location.replace('login.html')
+    }
+  });
+})()
 let submitbtn = document.getElementById('submit');
 let searchbtn = document.getElementById('searchbtn');
 let card = document.getElementById('card');
