@@ -9,16 +9,6 @@
  };
  firebase.initializeApp(config);
 
-function googleSignin{
-  base_provider = new firebase.auth.GoogleAuthProvider()
-  firebase.auth().signinWithPopup(base_provider).then(function(result){
-    //rgrg
-
-  }).catch(function(err){
-    //asdsad
-  })
-}
-
 
 
 let submitbtn = document.getElementById('submit');
